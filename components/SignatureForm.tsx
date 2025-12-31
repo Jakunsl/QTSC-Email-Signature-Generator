@@ -102,32 +102,22 @@ export const SignatureForm: React.FC<SignatureFormProps> = ({ data, onUpdate, on
 
     return (
         <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-slate-100">
-            <h2 className="text-xl font-semibold mb-6 text-slate-800">Your Details</h2>
+            <h2 className="text-xl font-semibold mb-6 text-slate-800">Thông Tin Của Bạn</h2>
             <div className="space-y-6">
                 
                 <div className="space-y-4">
-                    <h3 className="text-lg font-medium text-slate-700 border-b pb-2">Personal Information</h3>
-                    <InputField label="Full Name" name="name" value={data.name} placeholder="e.g., Jane Smith" onChange={handleChange} />
-                    <InputField label="Position" name="position" value={data.position} placeholder="e.g., Software Engineer" onChange={handleChange} />
-                    <InputField label="Title / Department" name="title" value={data.title} placeholder="e.g., Marketing Manager" onChange={handleChange} />
-                    <InputField label="Mobile Phone" name="phone" value={data.phone} placeholder="e.g., +1 987-654-3210" onChange={handleChange} />
-                    <InputField label="Mobile Phone 2" name="phone2" value={data.phone2} placeholder="e.g., +1 123-456-7890" onChange={handleChange} />
-                    <InputField label="Email Address" name="email" value={data.email} placeholder="e.g., jane.smith@innovate.com" onChange={handleChange} />
-                    <InputField label="Address" name="address" value={data.address} placeholder="e.g., 456 Innovation Drive, Tech City" onChange={handleChange} />
-                </div>
-                
-                <div className="space-y-4">
-                    <h3 className="text-lg font-medium text-slate-700 border-b pb-2">Company & Social Links</h3>
-                    <InputField label="Company Phone" name="companyPhone" value={data.companyPhone} placeholder="e.g., (123) 456-7890" onChange={handleChange} />
-                    <InputField label="Company Website" name="website" value={data.website} placeholder="e.g., www.innovate.com" onChange={handleChange} />
-                    <InputField label="Facebook URL" name="facebook" value={data.facebook} placeholder="https://facebook.com/..." onChange={handleChange} />
-                    <InputField label="YouTube URL" name="youtube" value={data.youtube} placeholder="https://youtube.com/..." onChange={handleChange} />
-                    <InputField label="Twitter URL" name="twitter" value={data.twitter} placeholder="https://twitter.com/..." onChange={handleChange} />
-                    <InputField label="LinkedIn URL" name="linkedin" value={data.linkedin} placeholder="https://linkedin.com/in/..." onChange={handleChange} />
+                    <h3 className="text-lg font-medium text-slate-700 border-b pb-2">Vui lòng cập nhật</h3>
+                    <InputField label="Họ và tên" name="name" value={data.name} placeholder="e.g., Lê Quốc Thắng" onChange={handleChange} />
+                    <InputField label="Chức vụ" name="position" value={data.position} placeholder="e.g., Officer" onChange={handleChange} />
+                    <InputField label="Phòng / Trung tâm" name="title" value={data.title} placeholder="e.g., Administration Department" onChange={handleChange} />
+                    <InputField label="Số di động" name="phone" value={data.phone} placeholder="e.g., 08888 77 586" onChange={handleChange} />
+                    <InputField label="Số di động" name="phone2" value={data.phone2} placeholder="e.g., 09090 99 888" onChange={handleChange} />
+                    <InputField label="Địa chỉ Email" name="email" value={data.email} placeholder="e.g., thanglq@qtsc.com.vn" onChange={handleChange} />
+                    <InputField label="Địa chỉ Công ty" name="address" value={data.address} placeholder="e.g., QTSC Building 1, QTSC, Trung My Tay Ward, Ho Chi Minh City, Vietnam" onChange={handleChange} />
                 </div>
 
                 <div className="space-y-4">
-                    <h3 className="text-lg font-medium text-slate-700 border-b pb-2">Company Logo Selection</h3>
+                    <h3 className="text-lg font-medium text-slate-700 border-b pb-2">Chọn Logo</h3>
                     <div className="grid grid-cols-2 gap-3">
                         {PREDEFINED_LOGOS.map((logo, idx) => (
                             <button
@@ -149,75 +139,6 @@ export const SignatureForm: React.FC<SignatureFormProps> = ({ data, onUpdate, on
                             </button>
                         ))}
                     </div>
-
-                    <div className="mt-4 border-t pt-4">
-                        <button 
-                            onClick={() => setCustomLogoExpanded(!customLogoExpanded)}
-                            className="flex items-center gap-2 text-sm font-medium text-slate-500 hover:text-slate-700"
-                        >
-                            <span className="bg-slate-100 p-1 rounded-full">
-                                <svg className={`w-4 h-4 transition-transform ${customLogoExpanded ? 'rotate-90' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                            </span>
-                            Use Custom/Upload Logo
-                        </button>
-
-                        {customLogoExpanded && (
-                            <div className="mt-4 bg-slate-50 p-4 rounded-lg border border-slate-200 animate-in fade-in slide-in-from-top-2">
-                                <div className="flex items-center gap-4">
-                                    <label className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 bg-white border border-slate-300 text-slate-700 text-sm font-semibold rounded-md cursor-pointer hover:bg-slate-50 transition-colors shadow-sm">
-                                        <UploadIcon className="h-4 w-4 text-slate-500" />
-                                        <span>Upload File</span>
-                                        <input type="file" accept="image/*" className="hidden" onChange={handleFileChange} />
-                                    </label>
-                                    <button 
-                                        onClick={() => setShowUrlInput(!showUrlInput)}
-                                        className="flex-1 px-4 py-2 bg-white border border-slate-300 text-slate-700 text-sm font-semibold rounded-md hover:bg-slate-50 transition-colors"
-                                    >
-                                        Custom URL
-                                    </button>
-                                </div>
-                                {showUrlInput && (
-                                    <div className="mt-4">
-                                        <InputField label="Logo Image URL" name="imageUrl" value={data.imageUrl || ''} placeholder="https://example.com/logo.png" onChange={handleChange} />
-                                    </div>
-                                )}
-                            </div>
-                        )}
-                    </div>
-                </div>
-
-                <div className="space-y-4">
-                     <h3 className="text-lg font-medium text-slate-700 border-b pb-2">Disclaimer</h3>
-                    <TextAreaField label="Disclaimer Text" name="disclaimer" value={data.disclaimer} placeholder="e.g., This message is confidential..." onChange={handleChange} />
-                </div>
-
-                 <div className="border-t pt-4">
-                    <button 
-                        onClick={() => setIconsExpanded(!iconsExpanded)}
-                        className="w-full text-left"
-                        aria-expanded={iconsExpanded}
-                    >
-                        <h3 className="text-lg font-medium text-slate-700 flex justify-between items-center">
-                            <span>Customize Icons</span>
-                            <svg className={`w-5 h-5 transition-transform ${iconsExpanded ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </h3>
-                    </button>
-                    {iconsExpanded && (
-                         <div className="mt-4 grid grid-cols-1 gap-4">
-                           {iconFields.map(field => (
-                               <InputField
-                                   key={field.name}
-                                   label={field.label}
-                                   name={field.name}
-                                   value={data[field.name]}
-                                   placeholder="Paste image URL here"
-                                   onChange={handleChange}
-                               />
-                           ))}
-                        </div>
-                    )}
                 </div>
 
                 <div className="border-t pt-6 mt-6 flex flex-col sm:flex-row gap-4">

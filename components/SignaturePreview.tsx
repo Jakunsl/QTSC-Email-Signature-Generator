@@ -45,7 +45,7 @@ export const SignaturePreview = forwardRef<HTMLDivElement, SignaturePreviewProps
                                             </td>
                                         </tr>
                                     )}
-                                    {title && (
+                                    {position && (
                                         <tr style={{ height: '19pt' }}>
                                             <td style={{ padding: '0' }}>
                                                 <table cellPadding="0" cellSpacing="0" border={0} style={{ borderCollapse: 'collapse' }}>

@@ -141,8 +141,8 @@ const App: React.FC = () => {
         <div className="min-h-screen font-sans text-slate-800">
             <header className="bg-white shadow-sm border-b border-slate-200">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
-                    <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">Email Signature Generator</h1>
-                    <p className="text-slate-500 mt-1">Professional 700px fixed-layout signatures for Gmail and Outlook.</p>
+                    <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">Trình tạo chữ ký email QTSC</h1>
+                    <p className="text-slate-500 mt-1">Chữ ký với bố cục cố định chuyên nghiệp dành cho Webmail và Outlook.</p>
                 </div>
             </header>
 
@@ -161,7 +161,7 @@ const App: React.FC = () => {
 
                     <div className="lg:col-span-3">
                         <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg sticky top-8 border border-slate-100">
-                            <h2 className="text-xl font-semibold mb-4 text-slate-800">Live Preview (700px)</h2>
+                            <h2 className="text-xl font-semibold mb-4 text-slate-800">Xem trước Trực tiếp</h2>
                              <div className="bg-slate-100 p-6 rounded-lg overflow-x-auto border border-slate-200 flex justify-center">
                                 <div className="bg-white shadow-sm p-4 rounded border border-slate-200" style={{ width: 'fit-content' }}>
                                     <SignaturePreview data={signatureData} ref={previewRef} />
@@ -185,7 +185,7 @@ const App: React.FC = () => {
 
                                 <div className="relative flex items-center py-2">
                                     <div className="flex-grow border-t border-slate-200"></div>
-                                    <span className="flex-shrink mx-4 text-slate-400 text-xs font-bold uppercase tracking-widest">OR</span>
+                                    <span className="flex-shrink mx-4 text-slate-400 text-xs font-bold uppercase tracking-widest">Hoặc</span>
                                     <div className="flex-grow border-t border-slate-200"></div>
                                 </div>
 
@@ -210,7 +210,7 @@ const App: React.FC = () => {
                 </div>
             </main>
              <footer className="text-center py-10 text-slate-400 text-xs">
-                <p>&copy; {new Date().getFullYear()} Email Signature Generator. Professional Tools for Modern Business.</p>
+                <p>&copy; {new Date().getFullYear()} Thiết kế và xây dựng bởi <span style={{ fontWeight: 'bold' }}>DƯƠNG VĂN THUẬN</span></p>
             </footer>
         </div>
     );
