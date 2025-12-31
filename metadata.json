@@ -1,0 +1,5 @@
+{
+  "name": "QTSC Email Signature Generator",
+  "description": "A user-friendly tool to create professional email signatures with an attached image. Users can input their details, see a live preview, and copy the final signature to their clipboard to use in any email client.",
+  "requestFramePermissions": []
+}
