@@ -15,7 +15,7 @@ const PREDEFINED_LOGOS = [
     { name: 'QTSC', url: 'https://www.qtsc.com.vn/uploads/files/2022/03/01/chu-ky-email-04.png' },
     { name: 'TTCNS', url: 'https://www.qtsc.com.vn/uploads/files/2022/03/01/chu-ky-email-11.png' },
     { name: 'TTANM', url: 'https://www.qtsc.com.vn/uploads/files/2022/03/01/chu-ky-email-12.png' },
-    { name: 'None', url: 'https://www.qtsc.com.vn/uploads/logo/logo.png' }
+    { name: 'None', url: '#' }
 ];
 
 const InputField: React.FC<{
