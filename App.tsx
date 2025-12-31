@@ -6,7 +6,7 @@ import { CopyIcon, CheckIcon, DownloadIcon } from './components/icons';
 
 const defaultSignatureData: SignatureData = {
     name: 'Lê Quốc Thắng',
-    position: 'Chuyên viên',
+    position: 'Officer',
     title: 'Administration Department',
     phone: '08888 77 586',
     phone2: '09090 99 888',
