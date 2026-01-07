@@ -179,7 +179,7 @@ const App: React.FC = () => {
                                         }`}
                                     >
                                         {isCopied ? <CheckIcon /> : <CopyIcon />}
-                                        {isCopied ? 'HTML Copied!' : 'Copy for Webmail/Outlook (HTML)'}
+                                        {isCopied ? 'HTML Copied!' : 'Copy HTML'}
                                     </button>
                                 </div>
 

@@ -105,7 +105,7 @@ export const SignatureForm: React.FC<SignatureFormProps> = ({ data, onUpdate, on
             <div className="space-y-6">
                 
                 <div className="space-y-4">
-                    <h3 className="text-lg font-medium text-slate-700 border-b pb-2">Cập nhật thông tin của bạn vào Form bên dưới.</h3>
+                    <h3 className="text-lg font-medium text-slate-700 border-b pb-2">📢 Cập nhật thông tin của bạn vào Form bên dưới. Sau đó hãy click nút "Copy HTML" và paste vào Chử Ký trong ứng dụng Outlook hoặc Webmail.</h3>
                     <InputField label="Họ và tên" name="name" value={data.name} placeholder="e.g., Lê Quốc Thắng" onChange={handleChange} />
                     <InputField label="Chức vụ" name="position" value={data.position} placeholder="e.g., Officer" onChange={handleChange} />
                     <InputField label="Phòng / Trung tâm" name="title" value={data.title} placeholder="e.g., Administration Department" onChange={handleChange} />
