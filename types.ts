@@ -20,8 +20,9 @@ export interface SignatureData {
   mobileIcon2: string;
   emailIcon: string;
   addressIcon: string;
-  // Added lineIcon to match usage in App.tsx and SignaturePreview.tsx
+  // Fixed duplicate lineIcon identifier
   lineIcon: string;
+  bannerImage: string; // Added bannerImage property
   companyPhoneIcon: string;
   companyWebsiteIcon: string;
   facebookIcon: string;

@@ -1,4 +1,3 @@
-
 import React, { useCallback, useState } from 'react';
 import { type SignatureData } from '../types';
 import { CheckIcon, SaveIcon, ResetIcon, PhotoIcon, UploadIcon } from './icons';
@@ -12,9 +11,9 @@ interface SignatureFormProps {
 }
 
 const PREDEFINED_LOGOS = [
-    { name: 'QTSC', url: 'https://www.qtsc.com.vn/uploads/files/2022/03/01/chu-ky-email-04.png' },
-    { name: 'TTCNS', url: 'https://www.qtsc.com.vn/uploads/files/2022/03/01/chu-ky-email-11.png' },
-    { name: 'TTANM', url: 'https://www.qtsc.com.vn/uploads/files/2022/03/01/chu-ky-email-12.png' }
+    { name: 'QTSC', url: 'https://www.qtsc.com.vn/uploads/files/2022/03/01/logo25y.png' },
+    { name: 'TTCNS', url: '#' },
+    { name: 'TTANM', url: '#' }
 ];
 
 const InputField: React.FC<{
@@ -138,6 +137,12 @@ export const SignatureForm: React.FC<SignatureFormProps> = ({ data, onUpdate, on
                             </button>
                         ))}
                     </div>
+                </div>
+
+                <div className="space-y-4">
+                    <h3 className="text-lg font-medium text-slate-700 border-b pb-2">Banner & Phân Cách</h3>
+                    <InputField label="Banner Image URL" name="bannerImage" value={data.bannerImage} placeholder="Link hình ảnh banner..." onChange={handleChange} />
+                    <InputField label="Line Icon URL" name="lineIcon" value={data.lineIcon} placeholder="Link hình ảnh thanh phân cách..." onChange={handleChange} />
                 </div>
 
                 <div className="border-t pt-6 mt-6 flex flex-col sm:flex-row gap-4">

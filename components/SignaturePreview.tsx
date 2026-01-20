@@ -9,7 +9,7 @@ export const SignaturePreview = forwardRef<HTMLDivElement, SignaturePreviewProps
     const { 
         name, position, title, phone, phone2, email, address, imageUrl,
         companyPhone, website, facebook, youtube, twitter, linkedin, disclaimer,
-        mobileIcon, mobileIcon2, emailIcon, addressIcon, lineIcon, companyPhoneIcon, companyWebsiteIcon,
+        mobileIcon, mobileIcon2, emailIcon, addressIcon, lineIcon, bannerImage, companyPhoneIcon, companyWebsiteIcon,
         facebookIcon, youtubeIcon, twitterIcon, linkedinIcon
     } = data;
     const websiteUrl = website && !website.startsWith('http') ? `https://${website}` : website;
@@ -30,7 +30,7 @@ export const SignaturePreview = forwardRef<HTMLDivElement, SignaturePreviewProps
                      {/* --- PERSONAL INFO --- */}
                     <tr>
                         <td style={{ paddingBottom: '6px' }}>                            
-                            <table cellPadding="0" cellSpacing="0" border={0} style={{ borderCollapse: 'collapse'/*, marginTop: '12px'*/ }}>
+                            <table cellPadding="0" cellSpacing="0" border={0} style={{ borderCollapse: 'collapse' }}>
                                 <tbody>
                                     {name && (
                                         <tr style={{ height: '19pt' }}>
@@ -118,10 +118,23 @@ export const SignaturePreview = forwardRef<HTMLDivElement, SignaturePreviewProps
                     {/* --- RIGID SEPARATOR (700px) --- */}
                     <tr>
                         <td style={{ padding: '0 0 8px 0' }}>
-                            <table width="600" cellPadding="0" cellSpacing="0" border={0} style={{ borderCollapse: 'collapse', width: '600px', tableLayout: 'fixed' }}>
+                            <table width="700" cellPadding="0" cellSpacing="0" border={0} style={{ borderCollapse: 'collapse', width: '700px', tableLayout: 'fixed' }}>
                                 <tbody>
                                     <tr>
-                                        <td style={{ verticalAlign: 'middle', padding: '0 8px 2px 0' }}><img src={lineIcon} alt="Line" width="600" height="2" style={{ border: '0', display: 'block', verticalAlign: 'middle' }} /></td>
+                                        <td style={{ verticalAlign: 'middle', padding: '0 8px 2px 0' }}><img src={lineIcon} alt="Line" width="700" height="2" style={{ border: '0', display: 'block', verticalAlign: 'middle' }} /></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+
+                    {/* --- BANNER (700px) --- */}
+                    <tr>
+                        <td style={{ padding: '0 0 8px 0' }}>
+                            <table width="700" cellPadding="0" cellSpacing="0" border={0} style={{ borderCollapse: 'collapse', width: '700px', tableLayout: 'fixed' }}>
+                                <tbody>
+                                    <tr>
+                                        <td style={{ verticalAlign: 'middle', padding: '0 8px 2px 0' }}><img src={bannerImage} alt="Banner" width="700" style={{ border: '0', display: 'block', verticalAlign: 'middle' }} /></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -131,18 +144,18 @@ export const SignaturePreview = forwardRef<HTMLDivElement, SignaturePreviewProps
                     {/* --- COMPANY INFO --- */}
                     <tr>
                         <td>
-                            <table width="600" cellPadding="0" cellSpacing="0" border={0} style={{ borderCollapse: 'collapse', width: '600px', tableLayout: 'fixed' }}>
+                            <table width="700" cellPadding="0" cellSpacing="0" border={0} style={{ borderCollapse: 'collapse', width: '700px', tableLayout: 'fixed' }}>
                                 <tbody>
                                     <tr>
                                         {/* Logo Column - Fixed 150px Width */}
                                         {imageUrl && (
-                                            <td width="152" style={{ verticalAlign: 'top', width: '152px', paddingRight: '10.8px' }}>
-                                                <img src={imageUrl} alt="Company Logo" width="152" style={{ width: '152px', maxWidth: '152px', border: '0', display: 'block' }} />
+                                            <td width="220" style={{ verticalAlign: 'top', width: '220px', paddingRight: '10.8px' }}>
+                                                <img src={imageUrl} alt="Company Logo" width="220" style={{ width: '220px', maxWidth: '220px', border: '0', display: 'block' }} />
                                             </td>
                                         )}
                                         {/* Content Column - Fills Remaining Space (550px if logo exists) */}
                                         <td style={{ verticalAlign: 'top' }}>
-                                            <table cellPadding="0" cellSpacing="0" border={0} style={{ borderCollapse: 'collapse' }}>
+                                            <table cellPadding="0" cellSpacing="0" border={0} style={{ borderCollapse: 'collapse', width: '469.2px' }}>
                                                 <tbody>
                                                     <tr>
                                                         {companyPhone && (
@@ -170,7 +183,7 @@ export const SignaturePreview = forwardRef<HTMLDivElement, SignaturePreviewProps
                                                 </tbody>
                                             </table>
                                             {disclaimer && (
-                                                <p style={{ fontFamily: 'Arial, sans-serif', margin: '10px 0 0 0', fontSize: '7.5pt', color: '#808080',/* lineHeight: '1.4',*/ textAlign: 'justify' }}>
+                                                <p style={{ fontFamily: 'Arial, sans-serif', margin: '10px 0 0 0', fontSize: '7.5pt', color: '#808080', textAlign: 'justify' }}>
                                                     {disclaimer}
                                                 </p>
                                             )}
