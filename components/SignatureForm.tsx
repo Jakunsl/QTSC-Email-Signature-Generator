@@ -11,9 +11,7 @@ interface SignatureFormProps {
 }
 
 const PREDEFINED_LOGOS = [
-    { name: 'QTSC', url: 'https://www.qtsc.com.vn/uploads/files/2022/03/01/logo25y.png' },
-    { name: 'TTCNS', url: '#' },
-    { name: 'TTANM', url: '#' }
+    { name: 'QTSC', url: 'https://www.qtsc.com.vn/uploads/files/2022/03/01/logo25y.png' }
 ];
 
 const InputField: React.FC<{
